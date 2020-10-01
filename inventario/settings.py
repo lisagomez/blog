@@ -25,7 +25,7 @@ SECRET_KEY = 'oh!o99)#n^m78umj!#d7j6r-1e&im&78h0shdr)vigj9maz4b&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['vinvapp.herokuapp.com']
 
 
 # Application definition
