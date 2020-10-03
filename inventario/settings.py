@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['vinvapp.herokuapp.com/']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','vinvapp.herokuapp.com/']
 
 
 # Application definition
@@ -36,13 +36,18 @@ ALLOWED_HOSTS = ['vinvapp.herokuapp.com/']
 INSTALLED_APPS = [
     'inv.apps.InvConfig',
     'users.apps.UsersConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'crispy_forms',
+
+     'whitenoise.runserver_nostatic',
+
 ]
 
 MIDDLEWARE = [
@@ -82,10 +87,21 @@ WSGI_APPLICATION = 'inventario.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'d9vqvk7kognqk7',
+        'USER': 'lglfmflvurqshn',
+        'PASSWORD':'cc59da90ae4d85c9381159bd3649823a95f0cb4c3945f5d720e6e94a5a0cc3df',
+        'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+
+#{
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 
 # Password validation
