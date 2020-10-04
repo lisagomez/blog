@@ -85,16 +85,16 @@ WSGI_APPLICATION = 'inventario.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME':'d9vqvk7kognqk7',
-#        'USER': 'lglfmflvurqshn',
-#        'PASSWORD':'cc59da90ae4d85c9381159bd3649823a95f0cb4c3945f5d720e6e94a5a0cc3df',
-#        'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
-#        'PORT': '5432',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'d9vqvk7kognqk7',
+        'USER': 'lglfmflvurqshn',
+        'PASSWORD':'cc59da90ae4d85c9381159bd3649823a95f0cb4c3945f5d720e6e94a5a0cc3df',
+        'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
