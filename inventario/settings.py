@@ -85,16 +85,17 @@ WSGI_APPLICATION = 'inventario.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'d9vqvk7kognqk7',
-        'USER': 'lglfmflvurqshn',
-        'PASSWORD':'cc59da90ae4d85c9381159bd3649823a95f0cb4c3945f5d720e6e94a5a0cc3df',
-        'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME':'d9vqvk7kognqk7',
+#        'USER': 'lglfmflvurqshn',
+#        'PASSWORD':'cc59da90ae4d85c9381159bd3649823a95f0cb4c3945f5d720e6e94a5a0cc3df',
+#        'HOST': 'ec2-54-234-28-165.compute-1.amazonaws.com',
+#        'PORT': '5432',
+#    }
+#}
+
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
@@ -103,8 +104,8 @@ DATABASES = {
 #}
 
 # Heroku: Update database configuration from $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.parse('postgres://lglfmflvurqshn:cc59da90ae4d85c9381159bd3649823a95f0cb4c3945f5d720e6e94a5a0cc3df@ec2-54-234-28-165.compute-1.amazonaws.com:5432/d9vqvk7kognqk7', conn_max_age=600)
 
 
 # Password validation
